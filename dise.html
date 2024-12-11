@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d20 주사위 굴리기</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 20px 0;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    #result {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>d20 주사위 굴리기</h1>
+  <button onclick="rollD20()">주사위 굴리기</button>
+  <div id="result">결과: -</div>
+
+  <script>
+    function rollD20() {
+      const result = Math.floor(Math.random() * 20) + 1; // 1~20 사이의 랜덤 숫자 생성
+      document.getElementById('result').innerText = `결과: ${result}`;
+    }
+  </script>
+</body>
+</html>
